@@ -7,7 +7,7 @@ export default function Hero() {
           🕊️ EMPOWERING LIVES SINCE 2019
         </div>
 
-        <h1>
+        <h1 class="hero-head">
           New Wings for <br/>
           <span className="highlight">Every Child.</span> <br/>
           Every Dream.

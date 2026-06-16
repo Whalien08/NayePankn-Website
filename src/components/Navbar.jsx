@@ -13,6 +13,7 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
       </div>
 
       <div className="nav-links">
+        <a href="#home"> Home</a>
         <a href="#about">About Us</a>
         <a href="#programs">Our Programs</a>
         

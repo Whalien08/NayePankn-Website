@@ -1,4 +1,7 @@
+import { useState } from 'react'
+
 export default function Donate() {
+  const [showModal, setShowModal] = useState(false)
   return (
     <section id="donate" className="donate-section">
       <div className="donate-card">
@@ -13,7 +16,7 @@ export default function Donate() {
         <div className="donate-buttons">
           <a href="#donate" className="btn-primary">Join Us ➔</a>
           <br /><br />
-          <a href="#hero" className="btn-secondary">Volunteer</a>
+          <button onClick={() => setShowModal(true)} className="btn-secondary">Volunteer</button>
         </div>
         <br />
         <div className="donate-features">
@@ -22,6 +25,22 @@ export default function Donate() {
           <h5>✓ 100% Transparent</h5>
         </div>
       </div>
+
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-box">
+            <h3>Join as a Volunteer</h3>
+            <p>Fill out your details and our team will get back to you shortly.</p>
+            <form onSubmit={(e) => { e.preventDefault(); alert("Application Submitted!"); setShowModal(false); }}>
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <button type="submit" className="btn-primary">Submit Application</button>
+            </form>
+            <button className="close-modal" onClick={() => setShowModal(false)}>✕ Close</button>
+          </div>
+        </div>
+      )}
+      
     </section>
   )
 }
