@@ -1,6 +1,4 @@
-/* =========================================
-   GLOBAL THEME VARIABLES
-========================================= */
+/*GLOBAL THEME VARIABLES*/
 :root {
   --bg-primary: #f6f5f0;      /* Light beige */
   --bg-secondary: #eceae1;    /* Slightly darker beige */
@@ -25,9 +23,7 @@
   --badge-bg: #2a362c;
 }
 
-/* =========================================
-   BASE STYLES
-========================================= */
+/*BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -66,9 +62,7 @@ h1, h2, h3 {
   color: var(--accent-gold) !important;
 }
 
-/* =========================================
-   NAVBAR & CUSTOM HEADER
-========================================= */
+/*NAVBAR & CUSTOM HEADER*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -195,9 +189,7 @@ input:checked + .slider .icon {
   transform: translateX(28px); 
 }
 
-/* =========================================
-   HERO SECTION
-========================================= */
+/*HERO SECTION */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -285,9 +277,7 @@ input:checked + .slider .icon {
 .stat h2 span { color: var(--accent-gold); font-weight: normal; }
 .stat p { color: var(--text-secondary); font-family: 'Segoe UI', sans-serif;}
 
-/* =========================================
-   OTHER SECTIONS (About, Programs, Footer)
-========================================= */
+/*OTHER SECTIONS (About, Programs, Footer)*/
 .about-section, .donate-section {
   padding: 100px 20px;
   background-color: var(--bg-primary);
@@ -327,15 +317,15 @@ input:checked + .slider .icon {
   gap: 30px;
   max-width: 1200px;
   margin: 40px auto 0;
-  flex-wrap: nowrap; /* Prevents cards from jumping to a second row on desktop */
+  flex-wrap: nowrap; 
 }
 
 .card {
   background-color: var(--card-bg);
   padding: 30px 20px;
   border-radius: 10px;
-  flex: 1;           /* Makes all cards same width */
-  max-width: 350px;  /* Prevents them from getting too wide */
+  flex: 1;   
+  max-width: 350px; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
   text-align: left;
@@ -344,7 +334,6 @@ input:checked + .slider .icon {
 .card:hover { transform: translateY(-10px); }
 .card h3 { color: var(--accent-gold); margin-bottom: 15px; }
 
-/* Keep your existing Donate card styling but use variables */
 .donate-card {
   background-color: #2B4B3A;
   border-radius: 40px;
@@ -359,16 +348,16 @@ input:checked + .slider .icon {
 
 .donate-card .btn-primary {
   background-color: var(--accent-gold);
-  color: #2b3a2f !important; /* Always dark text inside the gold button */
+  color: #2b3a2f !important;
 }
 
 .donate-card .btn-secondary {
-  color: #a4ce95 !important;        /* Beautiful light green text from the image */
-  border-color: #5a7a62 !important;  /* Subtle border color */
+  color: #a4ce95 !important;       
+  border-color: #5a7a62 !important; 
   background-color: transparent;
 }
 
-/* Hover effects for a premium feel */
+
 .donate-card .btn-secondary:hover {
   border-color: #a4ce95 !important;
   color: #ffffff !important;
@@ -420,9 +409,7 @@ input:checked + .slider .icon {
 .footer-links a { color: #a3b8a7; }
 .footer-links a:hover { color: var(--accent-gold); }
 
-/* =========================================
-   📱 MOBILE RESPONSIVENESS
-========================================= */
+/*MOBILE RESPONSIVENESS*/
 @media (max-width: 768px) {
   .navbar { flex-direction: column; padding: 15px; gap: 20px; }
   .nav-brand { flex-direction: column; text-align: center; }
