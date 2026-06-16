@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="hero-section">
+    <section id="hero" className="hero-section">
       <div className="hero-content">
         
         <div className="hero-badge">

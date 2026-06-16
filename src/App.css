@@ -48,6 +48,13 @@ body {
   color: var(--text-primary);
   transition: background-color 0.4s ease, color 0.4s ease;
 }
+.app {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  width: 100%;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 
 h1, h2, h3 {
   font-family: 'Georgia', serif; 
@@ -138,7 +145,7 @@ h1, h2, h3 {
 }
 .theme-switch input {
   opacity: 0;
-  width: 0;
+  width: 100px;
   height: 0;
 }
 .slider {
@@ -297,14 +304,25 @@ input:checked + .slider:before {
   color: var(--text-secondary);
 }
 
+.card-container {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  flex-wrap: nowrap; /* Prevents cards from jumping to a second row on desktop */
+}
+
 .card {
   background-color: var(--card-bg);
   padding: 30px 20px;
   border-radius: 10px;
-  width: 300px;
+  flex: 1;           /* Makes all cards same width */
+  max-width: 350px;  /* Prevents them from getting too wide */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  margin: 15px auto;
   transition: transform 0.3s ease;
+  text-align: left;
 }
 
 .card:hover { transform: translateY(-10px); }
@@ -312,16 +330,34 @@ input:checked + .slider:before {
 
 /* Keep your existing Donate card styling but use variables */
 .donate-card {
-  background-color: #2b3a2f;
+  background-color: #2B4B3A;
   border-radius: 40px;
   padding: 60px 40px;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.donate-card h2 { color: white; }
+.donate-card h2,h5,h6,h1 { color: white; }
 .donate-desc { color: #a3b8a7; }
+
+.donate-card .btn-primary {
+  background-color: var(--accent-gold);
+  color: #2b3a2f !important; /* Always dark text inside the gold button */
+}
+
+.donate-card .btn-secondary {
+  color: #a4ce95 !important;        /* Beautiful light green text from the image */
+  border-color: #5a7a62 !important;  /* Subtle border color */
+  background-color: transparent;
+}
+
+/* Hover effects for a premium feel */
+.donate-card .btn-secondary:hover {
+  border-color: #a4ce95 !important;
+  color: #ffffff !important;
+  transform: scale(1.05);
+}
 
 .footer {
   background-color: #111813;
@@ -336,11 +372,22 @@ input:checked + .slider:before {
    📱 MOBILE RESPONSIVENESS
 ========================================= */
 @media (max-width: 768px) {
-  .navbar { flex-direction: column; padding: 15px; gap: 15px; }
+  .navbar { flex-direction: column; padding: 15px; gap: 20px; }
   .nav-brand { flex-direction: column; text-align: center; }
   .hero-badge{margin-top: 150px;}
   .hero-section h1 { font-size: 3rem;}
   .hero-buttons { flex-direction: column; gap: 15px; }
   .hero-stats { flex-wrap: wrap; gap: 30px; }
   .btn-primary, .btn-secondary { width: 100%; }
+  .donate-card h1 { font-size: 2rem;}
+  .card-container {
+    flex-direction: column;   
+    align-items: center;
+    gap: 20px;
+  }
+  .card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+  }
 }
