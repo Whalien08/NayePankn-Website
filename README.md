@@ -3,8 +3,8 @@
 A premium, fully responsive, and animated single-page website built for the NayePankh Foundation. This project was developed as a selection task for the Front End Development Internship, demonstrating modern web development workflows, component architecture, and advanced state-driven styling.
 
 ## 🔗 Live Demo & Repository
-* **Live Deployment Link:** [PASTE_YOUR_VERCEL_LIVE_LINK_HERE]
-* **GitHub Repository:** [PASTE_YOUR_GITHUB_REPO_LINK_HERE]
+* **Live Deployment Link:** [https://whalien08.github.io/NayePankn-Website/]
+* **GitHub Repository:** [https://github.com/Whalien08/NayePankn-Website.git]
 
 ---
 
