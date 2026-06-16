@@ -37,7 +37,7 @@ Follow these steps to set up and run the project on your machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone [PASTE_YOUR_GITHUB_REPO_URL_HERE]
+   git clone [https://github.com/Whalien08/NayePankn-Website.git]
    cd nayepankh-task
 
 2. **Install the dependencies:**
