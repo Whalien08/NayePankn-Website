@@ -1,7 +1,7 @@
 export default function Programs() {
   return (
     <section id="programs" className="programs-section">
-      <h2>Our Initiatives</h2>
+      <h1>Our Initiatives</h1>
       <div className="card-container">
         
         <div className="card">

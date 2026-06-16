@@ -183,7 +183,16 @@ input:checked + .slider:before {
 }
 .icon {
   font-size: 14px;
-  z-index: 1;
+  z-index: 3;
+  position: absolute;
+  left: 8px;                 
+  top: 5px;
+  transition: transform 0.4s ease; 
+  pointer-events: none;
+}
+
+input:checked + .slider .icon {
+  transform: translateX(28px); 
 }
 
 /* =========================================
@@ -302,10 +311,14 @@ input:checked + .slider:before {
   background-color: var(--bg-secondary);
   text-align: center;
 }
+.programs-section h1{
+  color: var(--text-primary);
+}
 
 .about-content p, .card p {
   color: var(--text-secondary);
 }
+.about h1{color:var(--text-primary);}
 
 .card-container {
   display: flex;

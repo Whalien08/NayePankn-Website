@@ -13,7 +13,7 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
       </div>
 
       <div className="nav-links">
-        <a href="#home"> Home</a>
+        <a href="#hero"> Home</a>
         <a href="#about">About Us</a>
         <a href="#programs">Our Programs</a>
         
@@ -21,7 +21,7 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
         <label className="theme-switch">
           <input type="checkbox" checked={isDarkMode} onChange={toggleTheme} />
           <span className="slider">
-            <span className="icon">{isDarkMode ? '🌙' : '☀️'}</span>
+            <span className="icon">{isDarkMode ? '☀️' : '🌙'}</span>
           </span>
         </label>
 
